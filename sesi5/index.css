@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+  --width: 50vw;
+  --color: #000000b3;
+  --helper-bg: #7286f57d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.3125rem 0;
+  color: var(--color);
+}
+
+p {
+  color: red;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+ol {
+  background-color: whitesmoke;
+  padding: 1.25rem;
+}
+
+li {
+  list-style-position: inside;
+}
+
+input {
+  display: block;
+  width: 100%;
+  color: black;
+  padding-inline: 0.625rem;
+}
+
+button {
+  width: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+body > header,
+main {
+  width: var(--width);
+  margin-inline: auto;
+  margin-block: 0.625rem;
+  background-color: var(--helper-bg);
+  padding: 1.25rem;
+}
+
+body > header {
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+main {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Classes */
+
+.wrapper-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+}
+
+.wrapper-input > div:first-child {
+  flex: 7;
+}
+
+.wrapper-input > div:nth-child(2) {
+  flex: 1;
+}
+
+.wrapper-input > div:nth-child(3) {
+  flex: 1;
+}
+
+.wrapper-input > div:not(:last-child) {
+  padding-right: 5px;
+}
+
+/* Media Query */
+
+@media screen and (width <=768px) {
+  body > header,
+  main {
+    width: 80vw;
+  }
+}
+
+@media screen and (width <=425px) {
+  body > header,
+  main {
+    width: 90vw;
+  }
+}

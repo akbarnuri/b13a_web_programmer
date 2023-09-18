@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lingkaran</title>
+</head>
+<body>
+    <h1>Lingkaran</h1>
+    
+    <!-- Form untuk memasukkan jari-jari -->
+    <form id="lingkaranForm">
+        <label for="jariJari">Masukkan jari-jari lingkaran:</label>
+        <input type="number" id="jariJari" name="jariJari" required>
+        <input type="submit" value="Hitung">
+    </form>
+
+    <!-- Output untuk menampilkan hasil perhitungan -->
+    <div id="hasil">
+        <p>Luas Lingkaran: <span id="luas"></span></p>
+        <p>Keliling Lingkaran: <span id="keliling"></span></p>
+    </div>
+
+    <script>
+        document.getElementById("lingkaranForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah halaman melakukan refresh
+
+            // Mendapatkan nilai jari-jari dari input
+            var jariJari = parseFloat(document.getElementById("jariJari").value);
+
+            // Proses perhitungan
+            var luas = hitungLuas(jariJari);
+            var keliling = hitungKeliling(jariJari);
+
+            // Assign hasil ke dalam variabel
+            document.getElementById("luas").textContent = luas.toFixed(2); // Menampilkan luas dengan 2 desimal
+            document.getElementById("keliling").textContent = keliling.toFixed(2); // Menampilkan keliling dengan 2 desimal
+        });
+
+        // Fungsi untuk menghitung luas lingkaran
+        function hitungLuas(jariJari) {
+            return Math.PI * Math.pow(jariJari, 2);
+        }
+
+        // Fungsi untuk menghitung keliling lingkaran
+        function hitungKeliling(jariJari) {
+            return 2 * Math.PI * jariJari;
+        }
+    </script>
+</body>
+</html>

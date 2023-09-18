@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akbar Nur Ichfan</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sesi 5</h1>
+    </header>
+
+    <main>
+      <article>
+        <h1>Print text based on user input.</h1>
+        <form id="loop-input-form">
+          <div class="wrapper-input">
+            <div>
+              <label for="text">Text</label>
+              <input
+                type="text"
+                placeholder="What's on your mind?"
+                name="text"
+                id="text"
+              />
+            </div>
+            <div>
+              <label for="count">Count</label>
+              <input type="number" min="1" value="1" name="count" id="count" />
+            </div>
+            <div>
+              <button>Submit</button>
+            </div>
+          </div>
+        </form>
+
+        <section>
+          <h1>Result</h1>
+          <div id="result"></div>
+        </section>
+      </article>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
